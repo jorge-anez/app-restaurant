@@ -11,7 +11,7 @@
 >
 
     <context:property-placeholder location="classpath:app.properties" />
-
+    <context:component-scan base-package="com.project.config" />
     <bean id="globalProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="classpath:app.properties"/>
     </bean>

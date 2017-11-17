@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
  */
 
 @Controller
-@RequestMapping("/home")
+@RequestMapping("/home1")
 public class TestController {
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public ModelAndView handleRequestInternal() throws Exception {

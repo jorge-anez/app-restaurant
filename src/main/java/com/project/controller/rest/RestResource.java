@@ -3,6 +3,7 @@ package com.project.controller.rest;
 import com.project.model.transer.BaseResponse;
 import com.project.model.transer.ObjectRequest;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class RestResource {
     private final AtomicLong counter = new AtomicLong();
 
+    @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public BaseResponse index() {
         return new BaseResponse();

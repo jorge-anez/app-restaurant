@@ -12,7 +12,7 @@
     <properties>
         <hibernate-version>4.3.5.Final</hibernate-version>
         <spring-version>4.2.3.RELEASE</spring-version>
-        <spring.security.version>4.2.1.RELEASE</spring.security.version>
+        <spring.security.version>4.2.3.RELEASE</spring.security.version>
     </properties>
 
     <dependencies>
@@ -36,22 +36,6 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.0.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.sun.faces</groupId>
-            <artifactId>jsf-api</artifactId>
-            <version>2.1.13</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.faces</groupId>
-            <artifactId>jsf-impl</artifactId>
-            <version>2.1.13</version>
-        </dependency>
-        <dependency>
-            <groupId>org.primefaces</groupId>
-            <artifactId>primefaces</artifactId>
-            <version>5.3</version>
         </dependency>
 
         <dependency>
@@ -106,6 +90,12 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
             <version>${spring.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security.oauth</groupId>
+            <artifactId>spring-security-oauth2</artifactId>
+            <version>2.2.1.BUILD-SNAPSHOT</version>
         </dependency>
 
 
