@@ -19,7 +19,8 @@ import java.util.concurrent.atomic.AtomicLong;
 public class RestResource {
     private final AtomicLong counter = new AtomicLong();
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAuthority('USER')")
+    //@PreAuthorize("#oauth2.hasScope('foo') and #oauth2.hasScope('read')")
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public BaseResponse index() {
         return new BaseResponse();
