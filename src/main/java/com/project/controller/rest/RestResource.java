@@ -20,7 +20,7 @@ public class RestResource {
     private final AtomicLong counter = new AtomicLong();
 
     //@PreAuthorize("hasAuthority('USER')")
-    @PreAuthorize("#oauth2.hasScope('foo') and #oauth2.hasScope('read')")
+    @PreAuthorize("#oauth2.hasScope('bar') and #oauth2.hasScope('read')")
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public BaseResponse index() {
         return new BaseResponse();
